@@ -6,7 +6,8 @@ Links:
 - Google collab: https://colab.research.google.com/drive/1vee1-ccTDdoTZCsFuRu4I3Dwd0E3wGWW?usp=sharing
 
 Files:
-- words.txt - all words in the dataset PSD
+- words.txt - all words in the dataset PSD,
+- getting_words_from_dataset.py - script to get all the words from dataset
 
 Notes:
 - 50/50 (pula do szkolenia/pula do sprawdzania) + cross validacja,
