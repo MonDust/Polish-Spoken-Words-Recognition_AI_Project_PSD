@@ -12,6 +12,11 @@ Other google collab: starting from the start, building for only words with alrea
 Files:
 - words.txt - all words in the dataset PSD,
 - getting_words_from_dataset.py - script to get all the words from dataset
+- words_final.txt - all words after extracting them,
+- split2.py - splitting the dataset into testing and training (getting the names into csv files)
+- csv files - the dataset split into testing and training
+- find_words.py - find final words (after extracting the words from files)
+- words_to_folders.py - script used for extracting words into folders
 
 Notes:
 - 50/50 (pula do szkolenia/pula do sprawdzania) + cross validacja,
