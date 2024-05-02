@@ -7,7 +7,7 @@ Links:
 - Other google collab: https://colab.research.google.com/drive/1044ulkEg6t_PzotxHb7TdyOdJJ2BQF94?usp=sharing
 - dataset: https://drive.google.com/drive/folders/1rypKZAU2qBCL2A7KVw71hSc7J6Y17PZl?usp=sharing
 
-Google collab: messy, doesn't work, is build weirdly
+Google collab: messy, doesn't work, is build weirdly.
 Other google collab: starting from the start, building for only words with already splitted files into words.
 
 Files:
