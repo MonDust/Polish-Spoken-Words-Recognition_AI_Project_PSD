@@ -2,14 +2,14 @@
 Artificial neural network classifier trained by backpropagation for polish spoken words recognition (PSD dataset) 
 
 Links:
+- Google collab - words: https://colab.research.google.com/drive/1044ulkEg6t_PzotxHb7TdyOdJJ2BQF94?usp=sharing
 - Shared information: https://pgedupl-my.sharepoint.com/:w:/g/personal/s193507_student_pg_edu_pl/ERdnZW877kRHh-C_ZeyAGzwB1uRteGOSYwk5hAic-0g5Tw?e=NQnaa8
-- Google collab: https://colab.research.google.com/drive/1vee1-ccTDdoTZCsFuRu4I3Dwd0E3wGWW?usp=sharing
-- Other google collab: https://colab.research.google.com/drive/1044ulkEg6t_PzotxHb7TdyOdJJ2BQF94?usp=sharing
+- [OLD] Google collab - sentences: https://colab.research.google.com/drive/1vee1-ccTDdoTZCsFuRu4I3Dwd0E3wGWW?usp=sharing
 - dataset: https://drive.google.com/drive/folders/1rypKZAU2qBCL2A7KVw71hSc7J6Y17PZl?usp=sharing
 - extracted words: https://drive.google.com/drive/folders/1AustmyTC9NP_kj5B3plggsSKEe5uiJug?usp=drive_link
 
-Google collab: messy, doesn't work, is build weirdly.
-Other google collab: starting from the start, building for only words with already splitted files into words.
+[OLD] Google collab - sentences: messy, doesn't work, is build weirdly.
+Google collab - words: starting from the start, building for only words with already splitted files into words.
 
 Files:
 - words.txt - all words in the dataset PSD,
