@@ -18,15 +18,15 @@ def count_files_in_directory(directory_path):
             file_count[subdir] = num_files
     return file_count
 
-def find_words_with_more_than_8_files(file_count_dict):
+def find_words_with_more_than__files(file_count_dict):
     """
-    Find all keys (subdirectory names) in the dictionary that have values greater than 8.
+    Find all keys (subdirectory names) in the dictionary that have values greater than __.
 
     Parameters:
     file_count_dict (dict): A dictionary where keys are subdirectory names and values are the number of files.
 
     Returns:
-    list: A list of subdirectory names that have more than 8 files.
+    list: A list of subdirectory names that have more than __ files.
     """
     words = [word for word, count in file_count_dict.items() if count > 100]
     return words
@@ -51,7 +51,7 @@ output_file = "C:\\Users\\maria\\Desktop\\PG\\SEM_IV\\Artificial_Intelligence\\P
 file_counts = count_files_in_directory(words_dir)
 
 # Find words with more than 8 files
-words_with_more_than_8_files = find_words_with_more_than_8_files(file_counts)
+words_with_more_than__files = find_words_with_more_than__files(file_counts)
 
 # Write the words to the output file
-write_words_to_file(words_with_more_than_8_files, output_file)
+write_words_to_file(words_with_more_than__files, output_file)
