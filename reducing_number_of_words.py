@@ -18,8 +18,9 @@ def write_words_to_file(words_list, output_file_path):
         for word in words_list:
             file.write(f"{word}\n")
 
-words_dir = "C:\\Users\\maria\\Desktop\\PG\\SEM_IV\\Artificial_Intelligence\\Project\\PSD\\words"
-output_file = "C:\\Users\\maria\\Desktop\\PG\\SEM_IV\\Artificial_Intelligence\\Project\\PSD\\words_useful2.txt"
+# Gett needed words - put appropriate file directory.
+words_dir = "...\\words"
+output_file = "...\\words_useful.txt"
 
 file_counts = count_files_in_directory(words_dir)
 

@@ -57,9 +57,10 @@ def preprocess_dataset(file_paths, labels, batch_size=64):
 
     return dataset
 
-with open(r'C:\Users\maria\Desktop\PG\SEM_IV\Artificial_Intelligence\Project\PSD\words_useful2.txt', 'r', encoding='utf-8') as file:
+# Add appropriate file paths here
+with open(r'...\Project\PSD\words_useful2.txt', 'r', encoding='utf-8') as file:
     words = file.read().splitlines()
-words_dir = r'C:\Users\maria\Desktop\PG\SEM_IV\Artificial_Intelligence\Project\PSD\words'
+words_dir = r'...\Project\PSD\words'
 maximum_number_of_words = len(words)
 number_of_words = 50
 if maximum_number_of_words < number_of_words:

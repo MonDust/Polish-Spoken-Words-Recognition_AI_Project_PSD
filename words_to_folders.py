@@ -17,7 +17,8 @@ from pydub import AudioSegment
 
 """1.2 File paths."""
 
-folder_path = "C:\\Users\\maria\\Desktop\\PG\\SEM_IV\\Artificial_Intelligence\\Project\\PSD"
+# Putting here the folder path where the database is located.
+folder_path = " "
 #folder_path = "/content/drive/MyDrive/all_data/1-500/105"
 #word_list_path = '/content/drive/MyDrive/words.txt'
 
@@ -97,7 +98,9 @@ def get_next_file_number(directory):
     return max_number + 1
 
 def split_audio_by_words(wav_file, transcription):
-  words_dir = "C:\\Users\\maria\\Desktop\\PG\\SEM_IV\\Artificial_Intelligence\\Project\\PSD\\words"
+
+  # Putting here the folder where words are located.
+  words_dir = ""
   os.makedirs(words_dir, exist_ok=True)
   audio = AudioSegment.from_wav(wav_file)
 

@@ -1,0 +1,1 @@
+Each catalog contains recordings by one author in the form of 500 sentences. For each sentence, the audio track is in a *.wav file, the transcription is in a *.txt file, and the start and end times of each word and phoneme are in a *.TextGrid file. Individual sentences are numbered from 1 to 3000. The data is grouped into sections containing 500 sentences from different authors.
