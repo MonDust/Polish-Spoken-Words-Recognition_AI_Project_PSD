@@ -29,3 +29,7 @@ Old files:
 - csv files - the dataset split into testing and training
 - find_words.py - find final words (after extracting the words from files)
 - words_to_folders.py - script used for extracting words into folders
+
+## Authors
+O. Paszkiewicz (MonDust) - [GitHub](https://github.com/MonDust)
+Kaosek - [GitHub](https://github.com/Kaosek)
