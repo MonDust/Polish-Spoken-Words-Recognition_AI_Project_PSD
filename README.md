@@ -1,35 +1,87 @@
 # AI_Project_PSD
-Artificial neural network classifier trained by backpropagation for polish spoken words recognition (PSD dataset).
+## Description
+An artificial neural network classifier trained by backpropagation for polish spoken words recognition (PSD dataset).
 
-Links:
-- Shared information: https://pgedupl-my.sharepoint.com/:w:/g/personal/s193507_student_pg_edu_pl/ERdnZW877kRHh-C_ZeyAGzwB1uRteGOSYwk5hAic-0g5Tw?e=NQnaa8
-- dataset: https://drive.google.com/drive/folders/1rypKZAU2qBCL2A7KVw71hSc7J6Y17PZl?usp=sharing
-- extracted words: https://drive.google.com/drive/folders/1AustmyTC9NP_kj5B3plggsSKEe5uiJug?usp=drive_link
+## Project Goal
+The aim of this project is to develop a neural network classifier capable of recognizing spoken Polish words. The system processes recorded audio, extracts spectrogram features, and trains using backpropagation to achieve high accuracy.
 
-Files:
-- words_final.txt - all words after extracting them and not performing additional actions
+## Dataset
+**Source**: PSD dataset
+**Structure**: 
+- For each sentence, the audio track is in a *.wav file, the transcription is in a *.txt file, and the start and end times of each word and phoneme are in a *.TextGrid file. 
+- Individual sentences are numbered from 1 to 3000. The data is grouped into sections containing 500 sentences from different authors.
+- Full number of files: 12,000 (the same number for each file type).
 
-Notes:
-- 50/50 (pula do szkolenia/pula do sprawdzania) + cross validacja,
-- splotowa + rekurencujna najlepiej(?) - 25 ms + przesuwanie o 10 ms,
-- jeśli pojedyńcza (nie rekurencujna) - stała wielkość
-- najlepiej wyszukać słów wcześniej
+## Libraries used
+- `os`: File and directory operations
+- `tensorflow`: Audio processing and neural network training
+- `tensorflow.signal`: Generating spectrograms
+- `tensorflow.io`: Reading audio files
+- `tensorflow.data`: Efficient data pipelines
+- `tensorflow.keras.callbacks`: EarlyStopping and ModelCheckpoint
+- `scikit-learn (sklearn)`: Preprocessing, label encoding, model evaluation
+- `keras`: Model building, training, and evaluation
+- `keras.layers`: Defining model layers (Conv, Dense, Pooling, Normalization)
 
-Not used:
-- Google collab - words: https://colab.research.google.com/drive/1044ulkEg6t_PzotxHb7TdyOdJJ2BQF94?usp=sharing
-- [OLD] Google collab - sentences: https://colab.research.google.com/drive/1vee1-ccTDdoTZCsFuRu4I3Dwd0E3wGWW?usp=sharing
+## Data preparation
+- **Words Preparation**:
+  - Sentences split into individual words
+  - Words sorted alphabetically
+  - Words with at least 100 instances selected
+- **Audio Processing**:
+  - Read audio files (`tf.io.read_file`)
+  - Decode (`tf.audio.decode_wav`)
+  - Pad/truncate to 16,000 samples
+- **Feature Extraction**:
+  - Spectrogram generation using Short-Time Fourier Transform (STFT)
+  - Normalize spectrograms
+- **Label Encoding**:
+  - Labels numerically encoded and one-hot encoded
+- **Dataset Splitting**:
+  - 70% training, 15% validation, 15% testing
+  
+### Model Architecture
+- **Sequential Model** using Keras
+- **Convolutional Layers**:
+  - 3 Conv layers + MaxPooling
+  - ReLU activation
+  - L2 kernel regularization
+- **Flatten and Dense Layers**:
+  - Flatten layer
+  - Dense layer (256 units, ReLU)
+  - Dropout layer (rate = 0.5)
+- **Output Layer**:
+  - Dense layer with Softmax activation
+  
+## Training
+- **Data Handling**:
+  - Batching and prefetching using `tf.data.Dataset`
+- **Normalization**:
+  - Adapt normalization layer to dataset
+- **Compilation**:
+  - Loss: Categorical Cross-Entropy
+  - Optimizer: Adam
+  - Metric: Accuracy
+- **Callbacks**:
+  - EarlyStopping (patience = 4)
+  - ModelCheckpoint (save best model)
+- **Training Details**:
+  - Up to 40 epochs (early stopping applied)
+  
+## Testing
+- Final evaluation performed on the test dataset.
+- 10 training loops to assess consistency.
 
-[OLD] Google collab - sentences: messy, doesn't work, is build weirdly.
-Google collab - words: starting from the start, building for only words with already splitted files into words.
-
-Old files:
-- words.txt - all words in the dataset PSD,
-- getting_words_from_dataset.py - script to get all the words from dataset,
-- split2.py - splitting the dataset into testing and training (getting the names into csv files)
-- csv files - the dataset split into testing and training
-- find_words.py - find final words (after extracting the words from files)
-- words_to_folders.py - script used for extracting words into folders
+## Result
+The result was on average 80% accuracy while being trained on 50 words (18919 files 
+containing one word, and one word having at least 100 examples).
 
 ## Authors
 O. Paszkiewicz (MonDust) - [GitHub](https://github.com/MonDust)
+<<<<<<< HEAD
+
 Krzysztof Ostrzycki - [GitHub](https://github.com/KrzyszOst)
+
+=======
+Krzysztof Ostrzycki - [GitHub](https://github.com/KrzyszOst)
+>>>>>>> 841bec429b52dcdde5a63e366a903ffada05b7a2
