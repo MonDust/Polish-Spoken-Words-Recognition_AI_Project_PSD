@@ -78,10 +78,5 @@ containing one word, and one word having at least 100 examples).
 
 ## Authors
 O. Paszkiewicz (MonDust) - [GitHub](https://github.com/MonDust)
-<<<<<<< HEAD
 
 Krzysztof Ostrzycki - [GitHub](https://github.com/KrzyszOst)
-
-=======
-Krzysztof Ostrzycki - [GitHub](https://github.com/KrzyszOst)
->>>>>>> 841bec429b52dcdde5a63e366a903ffada05b7a2
