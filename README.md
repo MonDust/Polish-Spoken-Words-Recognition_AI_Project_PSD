@@ -32,4 +32,4 @@ Old files:
 
 ## Authors
 O. Paszkiewicz (MonDust) - [GitHub](https://github.com/MonDust)
-Kaosek - [GitHub](https://github.com/KrzyszOst)
+Krzysztof Ostrzycki - [GitHub](https://github.com/KrzyszOst)
